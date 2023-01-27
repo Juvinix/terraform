@@ -1,0 +1,64 @@
+sudo tail -n500 caminho do carquivo (Mostra as ultimas linhas)
+
+
+history (historico de comandos)
+
+gerar chaves(privada e publica)
+ssh-keygen -t rsa -f ~/.ssh/edeploy -C edeploy -b 2048
+
+acessa diretorio da chave
+cd ~/.ssh
+
+
+Banco(verificar tamanho tablespace)
+SELECT TABLESPACE_NAME FROM DBA_TABLESPACES;
+select sum(bytes) /1073741824 TAMANHO_GB from dba_segments;
+select sum(bytes) / 1024 / 1024 / 1024 tamanho_GB from dba_segments;
+
+
+puxar log
+
+sudo tail -n600 /var/log/messages
+
+
+Roles GCP
+compute.osAdminLogin
+compute.osLoginExternalUser
+https://cloud.google.com/compute/docs/oslogin/set-up-oslogin#grant-iam-roles
+
+Comando unzip
+sudo unzip delivery_bkp.zip -x */core.*
+
+
+o sar gera um log diario, por padrão de 10 em 10 minutos. Para pegar os logs antigos, a gente pega do /var/log/sa/
+la tem logs com as datas de criação
+da pra ver questão de rede, paginação, cpu, memoria, swap entre outras coisas
+de disco tbm: -d
+sar(nº)e sa(nº)
+
+
+pra ler usa: sar -r -f sa(nº)
+
+baixar pyhthon sem mexer na versão atual
+http://devfuria.com.br/linux/instalando-python/
+http://devfuria.com.br/linux/instalando-virtualenv/
+
+
+Caminho para aletrar quantidade de Threass
+
+ /etc/security/limits.d/
+https://stackoverflow.com/questions/32283003/python-cant-start-new-thread-100-active-threads
+
+
+Reiniciar a aplicação
+cd /home/edeploy/delivery/supervisor
+
+./stop.sh
+
+./start.sh
+
+
+
+
+
+
